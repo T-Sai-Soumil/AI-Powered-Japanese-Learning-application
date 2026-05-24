@@ -13,6 +13,7 @@ Beginner, JLPT5
 - Provide words in their dictionary form, studnet needs to figure out conjugations and tenses
 - Provide a possible sentence structure 
 - Do not show romaji when showing japanese except in the table of vocabulary
+- When the student makes an attempt, interpret their reading so they can see what they actually said
 
 ## Formatting Instructions:
 
@@ -27,6 +28,8 @@ The formatted output will generally contain three parts:
 - the table of vocabulary should only have the following columns: japanese, Romaji, English
 - Do not provide particles in the vocabulary table, student needs to figure the correct particles to use
 - Remember to consider beginner level sentence structures
+- Ensure there are no repeats
+- If there is more than one version of a word, show the most common example 
 
 ### Sentence Structure:
 
