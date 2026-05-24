@@ -1,0 +1,153 @@
+<sentence-structure-examples>
+
+    <example>
+        <sentence>I eat sushi.</sentence>
+        <structure>[Subject] [Object] [Verb]</structure>
+    </example>
+
+    <example>
+        <sentence>She reads a book at the library.</sentence>
+        <structure>[Subject] [Location] [Object] [Verb]</structure>
+    </example>
+
+    <example>
+        <sentence>The cat is in the room.</sentence>
+        <structure>[Thing] [Location] [Exist]</structure>
+    </example>
+
+    <example>
+        <sentence>There is a pen on the desk.</sentence>
+        <structure>[Thing] [Location] [Exist]</structure>
+    </example>
+
+    <example>
+        <sentence>I went to school yesterday.</sentence>
+        <structure>[Time] [Subject] [Destination] [Verb]</structure>
+    </example>
+
+    <example>
+        <sentence>They came home at night.</sentence>
+        <structure>[Time] [Subject] [Destination] [Verb]</structure>
+    </example>
+
+    <example>
+        <sentence>He watched TV this morning.</sentence>
+        <structure>[Time] [Subject] [Object] [Verb]</structure>
+    </example>
+
+    <example>
+        <sentence>We studied Japanese at school.</sentence>
+        <structure>[Subject] [Location] [Object] [Verb]</structure>
+    </example>
+
+    <example>
+        <sentence>The water is cold.</sentence>
+        <structure>[Subject] [Adjective]</structure>
+    </example>
+
+    <example>
+        <sentence>That movie was interesting.</sentence>
+        <structure>[Subject] [Adjective]</structure>
+    </example>
+
+    <example>
+        <sentence>I am a student.</sentence>
+        <structure>[Subject] [Noun]</structure>
+    </example>
+
+    <example>
+        <sentence>This is a hospital.</sentence>
+        <structure>[Subject] [Noun]</structure>
+    </example>
+
+    <example>
+        <sentence>My friend gave me a gift.</sentence>
+        <structure>[Giver] [Receiver] [Object] [Verb]</structure>
+    </example>
+
+    <example>
+        <sentence>I received a letter from my teacher.</sentence>
+        <structure>[Receiver] [Giver] [Object] [Verb]</structure>
+    </example>
+
+    <example>
+        <sentence>I want a new bag.</sentence>
+        <structure>[Subject] [Object] [Want]</structure>
+    </example>
+
+    <example>
+        <sentence>She wants to go to Japan.</sentence>
+        <structure>[Subject] [Verb]</structure>
+    </example>
+
+    <example>
+        <sentence>You may enter the room.</sentence>
+        <structure>[Action] [Permission]</structure>
+    </example>
+
+    <example>
+        <sentence>You must not smoke here.</sentence>
+        <structure>[Action] [Prohibition]</structure>
+    </example>
+
+    <example>
+        <sentence>Did you eat breakfast?</sentence>
+        <structure>[Subject] [Object] [Verb]</structure>
+    </example>
+
+    <example>
+        <sentence>Is this your umbrella?</sentence>
+        <structure>[Subject] [Noun]</structure>
+    </example>
+
+    <example>
+        <sentence>I went to the store and bought bread.</sentence>
+        <structure>[Action 1] [Connect] [Action 2]</structure>
+    </example>
+
+    <example>
+        <sentence>She woke up and drank coffee.</sentence>
+        <structure>[Action 1] [Connect] [Action 2]</structure>
+    </example>
+
+    <example>
+        <sentence>I looked at the sky.</sentence>
+        <structure>[Subject] [Target] [Verb]</structure>
+    </example>
+
+    <example>
+        <sentence>They listened to music.</sentence>
+        <structure>[Subject] [Target] [Verb]</structure>
+    </example>
+
+    <example>
+        <sentence>The person who is tall is my teacher.</sentence>
+        <structure>[Descriptor-Clause] [Noun]</structure>
+    </example>
+
+    <example>
+        <sentence>The book I bought yesterday is interesting.</sentence>
+        <structure>[Descriptor-Clause] [Noun]</structure>
+    </example>
+
+    <example>
+        <sentence>I studied because I have an exam tomorrow.</sentence>
+        <structure>[Reason] [Result/Action]</structure>
+    </example>
+
+    <example>
+        <sentence>Even though it was raining, we went outside.</sentence>
+        <structure>[Condition] [Result/Action]</structure>
+    </example>
+
+    <example>
+        <sentence>If it is cheap, I will buy it.</sentence>
+        <structure>[Condition] [Result/Action]</structure>
+    </example>
+
+    <example>
+        <sentence>When I came home, my mother was cooking.</sentence>
+        <structure>[Time-Clause] [Main-Clause]</structure>
+    </example>
+
+</sentence-structure-examples>
