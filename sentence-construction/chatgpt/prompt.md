@@ -26,10 +26,48 @@ The formatted output will generally contain three parts:
 - the table should only include nouns, adverbs, adjectives
 - the table of vocabulary should only have the following columns: japanese, Romaji, English
 - Do not provide particles in the vocabulary table, student needs to figure the correct particles to use
+- Remember to consider beginner level sentence structures
 
 ### Sentence Structure:
 
 - Do not provide particles in the sentence structure
+- Do not provide tenses or conjugations in the sentence structure
+
+Here is an list of examples of sentence structures:
+
+    | Example Meaning                              | Sentence Structure                             |
+    | -------------------------------------------- | ---------------------------------------------- |
+    | I eat sushi.                                 | [Subject] [Object] [Verb]                      |
+    | She reads a book at the library.             | [Subject] [Location] [Object] [Verb]           |
+    | The cat is in the room.                      | [Thing] [Location] [Exist]                     |
+    | There is a pen on the desk.                  | [Thing] [Location] [Exist]                     |
+    | I went to school yesterday.                  | [Time] [Subject] [Destination] [Verb]          |
+    | They came home at night.                     | [Time] [Subject] [Destination] [Verb]          |
+    | He watched TV this morning.                  | [Time] [Subject] [Object] [Verb]               |
+    | We studied Japanese at school.               | [Subject] [Location] [Object] [Verb]           |
+    | The water is cold.                           | [Subject] [Adjective]                          |
+    | That movie was interesting.                  | [Subject] [Adjective]                          |
+    | I am a student.                              | [Subject] [Noun]                               |
+    | This is a hospital.                          | [Subject] [Noun]                               |
+    | My friend gave me a gift.                    | [Giver] [Receiver] [Object] [Verb]             |
+    | I received a letter from my teacher.         | [Receiver] [Giver] [Object] [Verb]             |
+    | I want a new bag.                            | [Subject] [Object] [Want]                      |
+    | She wants to go to Japan.                    | [Subject] [Verb]                               |
+    | You may enter the room.                      | [Action] [Permission]                          |
+    | You must not smoke here.                     | [Action] [Prohibition]                         |
+    | Did you eat breakfast?                       | [Subject] [Object] [Verb]                      |
+    | Is this your umbrella?                       | [Subject] [Noun]                               |
+    | I went to the store and bought bread.        | [Action 1] [Connect] [Action 2]                |
+    | She woke up and drank coffee.                | [Action 1] [Connect] [Action 2]                |
+    | I looked at the sky.                         | [Subject] [Target] [Verb]                      |
+    | They listened to music.                      | [Subject] [Target] [Verb]                      |
+    | The person who is tall is my teacher.        | [Descriptor-Clause] [Noun]                     |
+    | The book I bought yesterday is interesting.  | [Descriptor-Clause] [Noun]                     |
+    | I studied because I have an exam tomorrow.   | [Reason] [Result/Action]                       |
+    | Even though it was raining, we went outside. | [Condition] [Result/Action]                    |
+    | If it is cheap, I will buy it.               | [Condition] [Result/Action]                    |
+    | When I came home, my mother was cooking.     | [Time-Clause] [Main-Clause]                    |
+
 
 ### Clues and Considerations:
 
