@@ -55,12 +55,27 @@ We have the following tables:
 
 ### API Endpoints:
 
-- GET /dashboard/last_study_session
-- GET /dashboard/study_progress
-- GET /dashboard/quick_stats
+- GET /api/dashboard/last_study_session
+- GET /api/dashboard/study_progress
+- GET /api/dashboard/quick_stats
+- GET /api/study_activities/:id
+- GET /api/study_activities/:id/study_sessions
+- POST /api/study_activites
+  - required params: group_id, study_activity_id
+- GET /api/words
+  - pagination with 100 items per page
 
-- GET /words
-- GET /words/:id
-- GET /groups
-- GET /groups/:id
-- GET /groups/:id/words
+- GET /api/words
+- GET /api/words/:id
+- GET /api/groups
+- GET /api/groups/:id
+- GET /api/groups/:id/words
+- GET /api/groups/:id/study_sessions
+- GET /api/study_sessions
+  - pagination with 100 items per page
+- GET /api/study_sessions/:id 
+- GET /api/study_sessions/:id/words
+- POST /api/reset_history
+- POST /api/full_reset
+- POST /api/study_sessions/:id/word_id/review
+  - required parameters: correct  
