@@ -63,7 +63,7 @@ We have the following tables:
 
 #### JSON Response:
 
-'''json 
+```json
 {
   "id": 123,
   "group_id": 456,
@@ -71,6 +71,7 @@ We have the following tables:
   "study_activity_id": 789,
   "group_name": "Basic Greetings"
 }
+```
 
 ### GET /api/dashboard/study_progress :
 
@@ -79,10 +80,12 @@ We have the following tables:
 
 #### JSON Response:
 
+```json
 {
   "total_words_studied": 150,
   "total_available_words": 500
 }
+```
 
 ### GET /api/dashboard/quick_stats :
 
@@ -90,23 +93,27 @@ We have the following tables:
 
 #### JSON Response:
 
+```json
 {
   "success_rate": 80.5,
   "total_study_sessions": 24,
   "total_active_groups": 3,
   "study_streak_days": 5
 }
+```
 
 ### GET /api/study_activities/:id
 
 #### JSON Response :
 
+```json
 {
   "id": 1,
   "name": "Flashcards",
   "thumbnail_url": "https://example.com/thumbnail.png",
   "description": "Practice vocabulary with flashcards"
 }
+```
 
 ### GET /api/study_activities/:id/study_sessions :
 
@@ -114,6 +121,7 @@ We have the following tables:
 
 #### JSON Response:
 
+```json
 {
   "items": [
     {
@@ -132,6 +140,7 @@ We have the following tables:
     "items_per_page": 20
   }
 }
+```
 
 ### POST /api/study_activites :
 
@@ -141,10 +150,12 @@ We have the following tables:
 
 #### JSON Response:
 
+```json
 {
   "group_id": 12,
   "study_activity_id": 1
 }
+```
 
 ### GET /api/words
 
@@ -152,6 +163,7 @@ We have the following tables:
 
 #### JSON Response:
 
+```json
 {
   "items": [
     {
@@ -170,11 +182,13 @@ We have the following tables:
     "items_per_page": 100
   }
 }
+```
 
 ### GET /api/words/:id :
 
 #### JSON Response:
 
+```json
 {
   "id": 1,
   "japanese": "こんにちは",
@@ -191,11 +205,13 @@ We have the following tables:
     }
   ]
 }
+```
 
 ### GET /api/groups :
 
 #### JSON Response:
 
+```json
 {
   "items": [
     {
@@ -211,11 +227,13 @@ We have the following tables:
     "items_per_page": 100
   }
 }
+```
 
 ### GET /api/groups/:id :
 
 #### JSON Response:
 
+```json
 {
   "id": 1,
   "name": "Basic Greetings",
@@ -223,11 +241,13 @@ We have the following tables:
     "total_word_count": 20
   }
 }
+```
 
 ### GET /api/groups/:id/words :
 
 #### JSON Response:
 
+```json
 {
   "items": [
     {
@@ -246,11 +266,13 @@ We have the following tables:
     "items_per_page": 100
   }
 }
+```
 
 ### GET /api/groups/:id/study_sessions :
 
 #### JSON Response:
 
+```json
 {
   "items": [
     {
@@ -269,6 +291,7 @@ We have the following tables:
     "items_per_page": 100
   }
 }
+```
 
 ### GET /api/study_sessions :
 
@@ -276,6 +299,7 @@ We have the following tables:
 
 #### JSON Response:
 
+```json
 {
   "items": [
     {
@@ -294,11 +318,13 @@ We have the following tables:
     "items_per_page": 100
   }
 }
+```
 
 ### GET /api/study_sessions/:id :
 
 #### JSON Response:
 
+```json
 {
   "id": 123,
   "activity_name": "Flashcards",
@@ -307,11 +333,13 @@ We have the following tables:
   "end_time": "2025-05-27T10:30:00Z",
   "review_items_count": 20
 }
+```
 
 ### GET /api/study_sessions/:id/words :
 
 #### JSON Response:
 
+```json
 {
   "items": [
     {
@@ -330,24 +358,29 @@ We have the following tables:
     "items_per_page": 100
   }
 }
+```
 
 ### POST /api/reset_history :
 
 #### JSON Response:
 
+```json
 {
   "success": true,
   "message": "Study history has been reset"
 }
+```
 
 ### POST /api/full_reset :
 
 #### JSON Response:
 
+```json
 {
   "success": true,
   "message": "System has been fully reset"
 }
+```
 
 ### POST /api/study_sessions/:id/word_id/review :
  
@@ -359,12 +392,15 @@ We have the following tables:
 
 #### Request Payload:
 
+```json
 {
   "correct": true
 }
+```
 
 #### JSON Response:
 
+```json
 {
   "success": true,
   "word_id": 1,
@@ -372,6 +408,7 @@ We have the following tables:
   "correct": true,
   "created_at": "2025-05-27T10:05:00Z"
 }
+```
 
 ## Mage Tasks:
 
@@ -399,6 +436,7 @@ We have the following tables:
 
 - In our task, we should have DSL to specific each seed file and it's expected group word name.
 
+```json
 [
   {
     "kanji": "払う",
@@ -409,4 +447,5 @@ We have the following tables:
       { "kanji": "う", "romaji": ["u"] }
     ]
   }
-]  
+]
+```
