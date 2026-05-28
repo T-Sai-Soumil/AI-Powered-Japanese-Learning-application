@@ -1,0 +1,26 @@
+[
+  {
+    "japanese": "こんにちは",
+    "romaji": "konnichiwa",
+    "english": "hello",
+    "parts": [
+      { "japanese": "こ", "romaji": ["ko"] },
+      { "japanese": "ん", "romaji": ["n"] },
+      { "japanese": "に", "romaji": ["ni"] },
+      { "japanese": "ち", "romaji": ["chi"] },
+      { "japanese": "は", "romaji": ["wa"] }
+    ]
+  },
+  {
+    "japanese": "ありがとう",
+    "romaji": "arigatou",
+    "english": "thank you",
+    "parts": [
+      { "japanese": "あ", "romaji": ["a"] },
+      { "japanese": "り", "romaji": ["ri"] },
+      { "japanese": "が", "romaji": ["ga"] },
+      { "japanese": "と", "romaji": ["to"] },
+      { "japanese": "う", "romaji": ["u"] }
+    ]
+  }
+]

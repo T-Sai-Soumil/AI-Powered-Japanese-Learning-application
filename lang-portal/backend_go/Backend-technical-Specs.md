@@ -12,9 +12,25 @@ A language learning school wants to build a prototype of learning portal which w
 - The backend will be built using Go
 - The database will be SQLite3
 - The API will be built using Gin
+- Mage is a task runner for Go.
 - The API will always return JSON
 - There will be no authentication or authorization
 - Everything will be treated as a single user
+
+## Directory Structure:
+
+```text 
+backend_go/
+├── magefile.go         # Mage tasks
+├── main.go             # Gin Server entrypoint
+├── internal/           # Private application code (Standard Go layout)
+│   ├── models/         # Go structs representing database entities
+│   ├── handlers/       # API Endpoint controllers
+│   └── database/       # SQLite DB connection & queries
+└── db/                 # Database schema and data
+    ├── migrations/     # .sql files for schema
+    └── seeds/          # .json seed files
+```
 
 ## Database Schema:
 
