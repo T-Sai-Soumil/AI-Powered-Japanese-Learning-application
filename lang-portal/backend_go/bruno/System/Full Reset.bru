@@ -1,0 +1,15 @@
+meta {
+  name: Full Reset
+  type: http
+  seq: 2
+}
+
+post {
+  url: http://localhost:8080/api/full_reset
+  body: none
+  auth: none
+}
+
+assert {
+  res.status: eq 200
+}

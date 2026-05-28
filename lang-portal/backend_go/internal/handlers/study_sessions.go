@@ -157,7 +157,7 @@ func CreateStudySession(c *gin.Context) {
 	}
 
 	sessionID, _ := res.LastInsertId()
-	c.JSON(http.StatusOK, gin.H{
+	c.JSON(http.StatusCreated, gin.H{
 		"id":                sessionID,
 		"group_id":          input.GroupID,
 		"study_activity_id": input.StudyActivityID,

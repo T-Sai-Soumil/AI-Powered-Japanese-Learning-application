@@ -1,0 +1,15 @@
+meta {
+  name: Get Study Activity Sessions
+  type: http
+  seq: 2
+}
+
+get {
+  url: http://localhost:8080/api/study_activities/1/study_sessions
+  body: none
+  auth: none
+}
+
+assert {
+  res.status: eq 200
+}

@@ -1,0 +1,15 @@
+meta {
+  name: Study Progress
+  type: http
+  seq: 2
+}
+
+get {
+  url: http://localhost:8080/api/dashboard/study_progress
+  body: none
+  auth: none
+}
+
+assert {
+  res.status: eq 200
+}

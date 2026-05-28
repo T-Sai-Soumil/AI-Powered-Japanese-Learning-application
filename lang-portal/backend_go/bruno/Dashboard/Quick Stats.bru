@@ -1,0 +1,15 @@
+meta {
+  name: Quick Stats
+  type: http
+  seq: 3
+}
+
+get {
+  url: http://localhost:8080/api/dashboard/quick_stats
+  body: none
+  auth: none
+}
+
+assert {
+  res.status: eq 200
+}

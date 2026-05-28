@@ -1,0 +1,21 @@
+meta {
+  name: Review Word
+  type: http
+  seq: 5
+}
+
+post {
+  url: http://localhost:8080/api/study_sessions/1/words/1/review
+  body: json
+  auth: none
+}
+
+body:json {
+  {
+    "correct": true
+  }
+}
+
+assert {
+  res.status: eq 200
+}

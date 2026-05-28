@@ -1,0 +1,15 @@
+meta {
+  name: Get Group Study Sessions
+  type: http
+  seq: 4
+}
+
+get {
+  url: http://localhost:8080/api/groups/1/study_sessions
+  body: none
+  auth: none
+}
+
+assert {
+  res.status: eq 200
+}
