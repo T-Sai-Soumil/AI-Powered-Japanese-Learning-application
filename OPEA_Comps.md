@@ -1,0 +1,2 @@
+# Buisness Goal:
+- The company wants you to explore the effort it would take to run the AI workloads completely on servers that will live in house. The fractional CTO, suggests that it's the best practice to run workloads in containers or kubernetes. You as the AI engineer have been tasked to determine how to learn to work with the building blocks to construct your own genAI workloads running on containers
