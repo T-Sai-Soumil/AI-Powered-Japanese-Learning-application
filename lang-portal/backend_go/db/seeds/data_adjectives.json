@@ -1,0 +1,96 @@
+[
+  {
+    "kanji": "いい",
+    "romaji": "ii",
+    "english": "good",
+    "parts": [
+      { "kanji": "い", "romaji": ["i"] },
+      { "kanji": "い", "romaji": ["i"] }
+    ]
+  },
+  {
+    "kanji": "良い",
+    "romaji": "yoi",
+    "english": "good",
+    "parts": [
+      { "kanji": "良", "romaji": ["yo"] },
+      { "kanji": "い", "romaji": ["i"] }
+    ]
+  },
+  {
+    "kanji": "面白い",
+    "romaji": "omoshiroi",
+    "english": "interesting",
+    "parts": [
+      { "kanji": "面", "romaji": ["o", "mo"] },
+      { "kanji": "白", "romaji": ["shi", "ro"] },
+      { "kanji": "い", "romaji": ["i"] }
+    ]
+  },
+  {
+    "kanji": "同じ",
+    "romaji": "onaji",
+    "english": "same",
+    "parts": [
+      { "kanji": "同", "romaji": ["o", "na"] },
+      { "kanji": "じ", "romaji": ["ji"] }
+    ]
+  },
+  {
+    "kanji": "高い",
+    "romaji": "takai",
+    "english": "high/expensive",
+    "parts": [
+      { "kanji": "高", "romaji": ["ta", "ka"] },
+      { "kanji": "い", "romaji": ["i"] }
+    ]
+  },
+  {
+    "kanji": "低い",
+    "romaji": "hikui",
+    "english": "low",
+    "parts": [
+      { "kanji": "低", "romaji": ["hi", "ku"] },
+      { "kanji": "い", "romaji": ["i"] }
+    ]
+  },
+  {
+    "kanji": "大きい",
+    "romaji": "ookii",
+    "english": "big",
+    "parts": [
+      { "kanji": "大", "romaji": ["o", "o"] },
+      { "kanji": "き", "romaji": ["ki"] },
+      { "kanji": "い", "romaji": ["i"] }
+    ]
+  },
+  {
+    "kanji": "小さい",
+    "romaji": "chiisai",
+    "english": "small",
+    "parts": [
+      { "kanji": "小", "romaji": ["chi", "i"] },
+      { "kanji": "さ", "romaji": ["sa"] },
+      { "kanji": "い", "romaji": ["i"] }
+    ]
+  },
+  {
+    "kanji": "新しい",
+    "romaji": "atarashii",
+    "english": "new",
+    "parts": [
+      { "kanji": "新", "romaji": ["a", "ta", "ra"] },
+      { "kanji": "し", "romaji": ["shi"] },
+      { "kanji": "い", "romaji": ["i"] }
+    ]
+  },
+  {
+    "kanji": "古い",
+    "romaji": "furui",
+    "english": "old",
+    "parts": [
+      { "kanji": "古", "romaji": ["fu", "ru"] },
+      { "kanji": "い", "romaji": ["i"] }
+    ]
+  }
+]

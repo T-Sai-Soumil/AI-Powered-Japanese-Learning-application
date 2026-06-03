@@ -26,14 +26,14 @@ class ExampleService:
         self.megaservice = ServiceOrchestrator()
 
     def add_remote_service(self):
-        embedding = MicroService(
-            name="embedding",
-            host=EMBEDDING_SERVICE_HOST_IP,
-            port=EMBEDDING_SERVICE_PORT,
-            endpoint="/v1/embeddings",
-            use_remote_service=True,
-            service_type=ServiceType.EMBEDDING,
-        )
+        #embedding = MicroService(
+            #name="embedding",
+            #host=EMBEDDING_SERVICE_HOST_IP,
+            #port=EMBEDDING_SERVICE_PORT,
+            #endpoint="/v1/embeddings",
+            #use_remote_service=True,
+            #service_type=ServiceType.EMBEDDING,
+        #)
         llm = MicroService(
             name="llm",
             host=LLM_SERVICE_HOST_IP,
@@ -42,8 +42,9 @@ class ExampleService:
             use_remote_service=True,
             service_type=ServiceType.LLM,
         )
-        self.megaservice.add(embedding).add(llm)
-        self.megaservice.flow_to(embedding, llm)
+        #self.megaservice.add(embedding).add(llm)
+        self.megaservice.add(llm)
+        #self.megaservice.flow_to(embedding, llm)
 
     def start(self):
 
@@ -66,6 +67,7 @@ class ExampleService:
             # Schedule the request through the orchestrator
             print("Before schedule")
             result = await self.megaservice.schedule(request.dict())
+            print("RESULT =", result)
             print("After schedule")
             #result = "Hello from MegaService"
 

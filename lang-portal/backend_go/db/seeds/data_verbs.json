@@ -1,0 +1,75 @@
+[
+  {
+    "kanji": "払う",
+    "romaji": "harau",
+    "english": "to pay",
+    "parts": [
+      { "kanji": "払", "romaji": ["ha", "ra"] },
+      { "kanji": "う", "romaji": ["u"] }
+    ]
+  },
+  {
+    "kanji": "行く",
+    "romaji": "iku",
+    "english": "to go",
+    "parts": [
+      { "kanji": "行", "romaji": ["i"] },
+      { "kanji": "く", "romaji": ["ku"] }
+    ]
+  },
+  {
+    "kanji": "食べる",
+    "romaji": "taberu",
+    "english": "to eat",
+    "parts": [
+      { "kanji": "食", "romaji": ["ta"] },
+      { "kanji": "べ", "romaji": ["be"] },
+      { "kanji": "る", "romaji": ["ru"] }
+    ]
+  },
+  {
+    "kanji": "飲む",
+    "romaji": "nomu",
+    "english": "to drink",
+    "parts": [
+      { "kanji": "飲", "romaji": ["no"] },
+      { "kanji": "む", "romaji": ["mu"] }
+    ]
+  },
+  {
+    "kanji": "見る",
+    "romaji": "miru",
+    "english": "to see",
+    "parts": [
+      { "kanji": "見", "romaji": ["mi"] },
+      { "kanji": "る", "romaji": ["ru"] }
+    ]
+  },
+  {
+    "kanji": "聞く",
+    "romaji": "kiku",
+    "english": "to hear/listen",
+    "parts": [
+      { "kanji": "聞", "romaji": ["ki"] },
+      { "kanji": "く", "romaji": ["ku"] }
+    ]
+  },
+  {
+    "kanji": "書く",
+    "romaji": "kaku",
+    "english": "to write",
+    "parts": [
+      { "kanji": "書", "romaji": ["ka"] },
+      { "kanji": "く", "romaji": ["ku"] }
+    ]
+  },
+  {
+    "kanji": "読む",
+    "romaji": "yomu",
+    "english": "to read",
+    "parts": [
+      { "kanji": "読", "romaji": ["yo"] },
+      { "kanji": "む", "romaji": ["mu"] }
+    ]
+  }
+]

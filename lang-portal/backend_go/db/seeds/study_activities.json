@@ -1,0 +1,22 @@
+[
+  {
+    "name": "Typing Tutor",
+    "url": "http://localhost:8080",
+    "preview_url": "/assets/study_activities/typing-tutor.png"
+  },
+  {
+    "name": "Flashcards",
+    "url": "http://localhost:8081",
+    "preview_url": "/assets/study_activities/flashcards.png"
+  },
+  {
+    "name": "Matching Game",
+    "url": "http://localhost:8082",
+    "preview_url": "/assets/study_activities/matching-game.png"
+  },
+  {
+    "name": "Quiz",
+    "url": "http://localhost:8083",
+    "preview_url": "/assets/study_activities/quiz.png"
+  }
+]
