@@ -1,7 +1,4 @@
 # language-learning-assistant
-This is for the generative AI bootcamp
-
-**Difficulty:** Level 200 *(Due to RAG implementation and multiple AWS services integration)*
 
 **Business Goal:**
 A progressive learning tool that demonstrates how RAG and agents can enhance language learning by grounding responses in real Japanese lesson content. The system shows the evolution from basic LLM responses to a fully contextual learning assistant, helping students understand both the technical implementation and practical benefits of RAG.
