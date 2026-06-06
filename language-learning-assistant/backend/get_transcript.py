@@ -43,7 +43,15 @@ class YouTubeTranscriptDownloader:
         print(f"Downloading transcript for video ID: {video_id}")
         
         try:
-            return YouTubeTranscriptApi.get_transcript(video_id, languages=self.languages)
+            raw_transcript = YouTubeTranscriptApi().fetch(video_id, languages=self.languages)
+            return [
+                {
+                    "text": entry.text,
+                    "start": entry.start,
+                    "duration": entry.duration
+                }
+                for entry in raw_transcript
+            ]
         except Exception as e:
             print(f"An error occurred: {str(e)}")
             return None

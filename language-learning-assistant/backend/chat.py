@@ -6,7 +6,7 @@ from typing import Optional, Dict, Any
 
 
 # Model ID
-MODEL_ID = "amazon.nova-micro-v1:0"
+MODEL_ID = "us.amazon.nova-micro-v1:0"
 
 
 
@@ -35,7 +35,12 @@ class BedrockChat:
             return response['output']['message']['content'][0]['text']
             
         except Exception as e:
-            st.error(f"Error generating response: {str(e)}")
+            try:
+                st.error(f"Error generating response: {str(e)}")
+            except Exception:
+                pass
+            import sys
+            print(f"\n[Error] Failed to generate response from Amazon Bedrock: {str(e)}", file=sys.stderr)
             return None
 
 

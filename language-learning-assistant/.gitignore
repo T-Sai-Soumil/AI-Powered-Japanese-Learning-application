@@ -174,3 +174,6 @@ language-learning-assistant/venv/
 **/__pycache__/
 *.pyc
 .env
+
+venv/
+.venv/
