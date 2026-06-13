@@ -17,6 +17,8 @@ import re
 
 from backend.chat import BedrockChat
 from backend.get_transcript import YouTubeTranscriptDownloader
+from backend.vector_store import QuestionVectorStore
+from backend.question_generator import QuestionGenerator
 
 
 # Page config
@@ -282,34 +284,98 @@ def render_rag_stage():
         st.info("Generated response will appear here")
 
 def render_interactive_stage():
-    """Render the interactive learning stage"""
+    """Render the interactive learning stage using Vector Store and Hugging Face RAG"""
     st.header("Interactive Learning")
     
-    # Practice type selection
-    practice_type = st.selectbox(
-        "Select Practice Type",
-        ["Dialogue Practice", "Vocabulary Quiz", "Listening Exercise"]
+    # Initialize instances in session state
+    if 'vector_store' not in st.session_state:
+        try:
+            st.session_state.vector_store = QuestionVectorStore()
+        except Exception as e:
+            st.error(f"Could not connect to Vector Store: {e}")
+            return
+            
+    if 'question_generator' not in st.session_state:
+        try:
+            st.session_state.question_generator = QuestionGenerator()
+        except Exception as e:
+            st.error(f"Could not initialize Question Generator: {e}")
+            return
+            
+    st.markdown("Enter a scenario you'd like to practice. The system will retrieve real JLPT N5 questions matching your topic from the vector database, and use them to dynamically generate a brand new question for you!")
+    
+    topic = st.text_input(
+        "What scenario do you want to practice?",
+        placeholder="e.g., Ordering food at a bakery, Buying a train ticket"
     )
     
-    col1, col2 = st.columns([2, 1])
-    
-    with col1:
-        st.subheader("Practice Scenario")
-        # Placeholder for scenario
-        st.info("Practice scenario will appear here")
+    if st.button("Generate Practice", type="primary") and topic:
+        with st.spinner("Searching vector database for similar questions..."):
+            # 1. Retrieve similar questions
+            results = st.session_state.vector_store.search_similar_questions(topic, n_results=3)
+            reference_texts = results['documents'][0] if results and results['documents'] else []
+            
+        if not reference_texts:
+            st.error("No reference questions found in the vector store. Make sure you ingested the transcripts first!")
+            return
+            
+        with st.spinner("Generating new scenario using Hugging Face RAG..."):
+            # 2. Generate derivative question
+            new_question = st.session_state.question_generator.generate_derivative_question(topic, reference_texts)
+            if new_question:
+                st.session_state.current_practice = new_question
+            else:
+                st.error("Failed to generate question from the LLM.")
+                return
+
+    # Display the generated practice if it exists in session state
+    if 'current_practice' in st.session_state and st.session_state.current_practice:
+        practice = st.session_state.current_practice
         
-        # Placeholder for multiple choice
-        options = ["Option 1", "Option 2", "Option 3", "Option 4"]
-        selected = st.radio("Choose your answer:", options)
+        st.markdown("---")
         
-    with col2:
-        st.subheader("Audio")
-        # Placeholder for audio player
-        st.info("Audio will appear here")
+        col1, col2 = st.columns([2, 1])
         
-        st.subheader("Feedback")
-        # Placeholder for feedback
-        st.info("Feedback will appear here")
+        with col1:
+            st.subheader("Practice Scenario")
+            st.info(f"**Introduction:**\n{practice.get('Introduction', '')}")
+            
+            st.markdown("**Conversation/Details:**")
+            st.code(practice.get('conversation', ''), language="text")
+            
+            st.markdown(f"**Question:** {practice.get('question', '')}")
+            
+            options = practice.get('options', [])
+            if options:
+                selected = st.radio("Choose your answer:", options, index=None)
+                
+                if selected is not None:
+                    if st.button("Check Answer", type="primary"):
+                        correct_answer = practice.get('correct_answer', '').strip()
+                        explanation = practice.get('explanation', '')
+                        
+                        try:
+                            selected_index = str(options.index(selected) + 1)
+                            if correct_answer and selected_index == correct_answer:
+                                st.success("✨ Correct! Great job!")
+                            elif correct_answer:
+                                st.error(f"❌ Incorrect. The correct answer was option {correct_answer}.")
+                            else:
+                                st.warning("Hmm, the AI forgot to provide the correct answer key for this question!")
+                                
+                            if explanation:
+                                st.info(f"**Explanation:**\n{explanation}")
+                        except ValueError:
+                            pass
+            else:
+                st.warning("No options were generated for this question.")
+                
+        with col2:
+            st.subheader("Audio")
+            st.info("Audio synthesis (TTS) will be implemented in a future update.")
+            
+            st.subheader("Reference Data")
+            st.caption("This question was generated using RAG based on the vector store.")
 
 def main():
     render_header()
@@ -329,11 +395,17 @@ def main():
     
     # Debug section at the bottom
     with st.expander("Debug Information"):
-        st.json({
+        debug_data = {
             "selected_stage": selected_stage,
             "transcript_loaded": st.session_state.transcript is not None,
             "chat_messages": len(st.session_state.messages)
-        })
+        }
+        if 'current_practice' in st.session_state and st.session_state.current_practice:
+            debug_data['raw_llm_output'] = st.session_state.current_practice.get('raw_output', '')
+            debug_data['parsed_correct_answer'] = st.session_state.current_practice.get('correct_answer', '')
+            debug_data['parsed_explanation'] = st.session_state.current_practice.get('explanation', '')
+            
+        st.json(debug_data)
 
 if __name__ == "__main__":
     main()
