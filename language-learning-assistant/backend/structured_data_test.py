@@ -46,11 +46,7 @@ class HuggingFaceTranscriptStructurer:
         # 2. List of potential paths to look for the token
         env_paths = [
             ".env",
-            "../.env",
-            # Windows Desktop path
-            "C:/Users/HP/Desktop/Langchain_sessions/.env",
-            # WSL path to Desktop folder
-            "/mnt/c/Users/HP/Desktop/Langchain_sessions/.env"
+            "../.env"
         ]
         
         for path in env_paths:
