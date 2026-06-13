@@ -177,3 +177,10 @@ language-learning-assistant/venv/
 
 venv/
 .venv/
+
+# Database and Vector Stores
+chroma_db/
+backend/chroma_db/
+
+# Mac OS System Files
+.DS_Store

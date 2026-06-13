@@ -1,0 +1,45 @@
+=== Start of 問題3 ===
+Description:
+Utterance Selection (発話表現)
+English: In this section, you look at a drawing showing a scenario with an arrow pointing to a person. You listen to the situation description and three spoken choices, then select the most appropriate phrase/greeting that the person pointed to would say.
+日本語: 【発話表現】矢印が指している人物のイラストを見ながら状況説明を聞き、その場面でその人が言うのに最もふさわしい表現（3つの音声選択肢から1つ）を選ぶセクションです。
+
+Introduction: 1番寝ます。他の人に何と言いますか。
+options:
+1: お疲れ様
+2: おやすみなさい
+3: また明日
+question: 何と言いますか。
+
+-----
+Introduction: 2番学校へ出かけます。家族に何と言いますか。
+options:
+1: 失礼します
+2: 今行きます
+3: 行ってきます
+question: 何と言いますか。
+
+-----
+Introduction: 3番電車に乗ります。東京まで何分で行くか聞きたいです。何と言いますか。
+options:
+1: どのぐらいかかりますか
+2: いくらですか
+3: 今何時ですか
+question: 何と言いますか。
+
+-----
+Introduction: 4番タクシーの中です。どこへ行きたいか言いますか。
+options:
+1: 近くの駅までお願いします
+2: 近くの駅まで行きます
+3: 近くの駅まで来てください
+question: 何と言いますか。
+
+-----
+Introduction: 5番喫茶店にいます。コーヒーを飲みたいです。
+options:
+1: コーヒーを願います
+2: コーヒーを取ってください
+3: コーヒーがあります
+question: 何と言いますか。
+=== End of 問題3 ===

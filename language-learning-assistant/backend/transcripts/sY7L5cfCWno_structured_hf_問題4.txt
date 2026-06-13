@@ -1,0 +1,53 @@
+=== Start of 問題4 ===
+Description:
+Quick Response (即時応答)
+English: In this section, there are no drawings or written options. You listen to a short spoken prompt (e.g. a question or greeting) and must select the best reply from three spoken options.
+日本語: 【即時応答】イラストや選択肢の記載はありません。短い発話（質問や挨拶など）を直接聞き、それに対する最も適切な返答を3つの音声選択肢から選ぶセクションです。
+
+Introduction: 1番 あの方はどなたですか
+options:
+1: とても親切な人です
+2: いいえ違います
+3: 山田先生です
+question: 1番 あの方はどなたですか
+
+-----
+Introduction: 2番 お父さんはおいくつですか
+options:
+1: ええそうです
+2: 250枚です
+3: 50歳です
+question: 2番 お父さんはおいくつですか
+
+-----
+Introduction: 3番 日本料理は何が好きですか
+options:
+1: おいしいです
+2: 天ぷらが好きです
+3: 时々食べます
+question: 3番 日本料理は何が好きですか
+
+-----
+Introduction: 4番 窓を開けましょうか
+options:
+1: ええお願いします
+2: ええ開けますね
+3: いえ開けてください
+question: 4番 窓を開けましょうか
+
+-----
+Introduction: 5番 すみませんオレンジジュースをお願いします
+options:
+1: 結構です
+2: かしこまりました
+3: はいおいしいです
+question: 5番 すみませんオレンジジュースをお願いします
+
+-----
+Introduction: 6番 会社まで何で行きますか
+options:
+1: とても遠いです
+2: バスで行きます
+3: 9時に行きます
+question: 6番 会社まで何で行きますか
+=== End of 問題4 ===
