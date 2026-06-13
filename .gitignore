@@ -3,3 +3,11 @@ venv/
 __pycache__/
 *.pyc
 .env
+
+kana--streamlit-app/venv/
+kana--streamlit-app/.venv/
+__pycache__/
+.cache/
+models/
+
+kana--streamlit-app/README.md
