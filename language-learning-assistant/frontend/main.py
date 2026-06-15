@@ -14,11 +14,44 @@ from typing import Dict
 import json
 from collections import Counter
 import re
+import datetime
 
 from backend.chat import BedrockChat
 from backend.get_transcript import YouTubeTranscriptDownloader
 from backend.vector_store import QuestionVectorStore
 from backend.question_generator import QuestionGenerator
+
+def save_question(topic: str, question_data: Dict):
+    """Save a generated question to a local JSON file."""
+    file_path = ROOT / "backend" / "saved_questions.json"
+    data = []
+    if file_path.exists():
+        try:
+            with open(file_path, "r", encoding="utf-8") as f:
+                data = json.load(f)
+        except Exception:
+            pass
+    
+    entry = {
+        "id": datetime.datetime.now().isoformat(),
+        "topic": topic,
+        "question_data": question_data
+    }
+    data.append(entry)
+    
+    with open(file_path, "w", encoding="utf-8") as f:
+        json.dump(data, f, ensure_ascii=False, indent=2)
+
+def load_saved_questions():
+    """Load previously generated questions from the local JSON file."""
+    file_path = ROOT / "backend" / "saved_questions.json"
+    if file_path.exists():
+        try:
+            with open(file_path, "r", encoding="utf-8") as f:
+                return json.load(f)
+        except Exception:
+            pass
+    return []
 
 
 # Page config
@@ -324,9 +357,27 @@ def render_interactive_stage():
             new_question = st.session_state.question_generator.generate_derivative_question(topic, reference_texts)
             if new_question:
                 st.session_state.current_practice = new_question
+                # Save the new question
+                save_question(topic, new_question)
             else:
                 st.error("Failed to generate question from the LLM.")
                 return
+
+    # Display saved questions in the sidebar
+    with st.sidebar:
+        st.markdown("---")
+        st.subheader("Saved Questions")
+        saved_q = load_saved_questions()
+        if saved_q:
+            for sq in reversed(saved_q):
+                # Display topic and short date
+                date_str = sq['id'][:10]
+                btn_label = f"📝 {sq['topic']} ({date_str})"
+                if st.button(btn_label, key=f"btn_{sq['id']}"):
+                    st.session_state.current_practice = sq['question_data']
+                    st.rerun()
+        else:
+            st.info("No saved questions yet.")
 
     # Display the generated practice if it exists in session state
     if 'current_practice' in st.session_state and st.session_state.current_practice:
@@ -372,8 +423,22 @@ def render_interactive_stage():
                 
         with col2:
             st.subheader("Audio")
-            st.info("Audio synthesis (TTS) will be implemented in a future update.")
             
+            if st.button("Generate Audio (VOICEVOX)", use_container_width=True):
+                with st.spinner("Generating audio... (Make sure VOICEVOX engine is running on localhost:50021)"):
+                    try:
+                        from backend.audio_generator import VoiceVoxGenerator
+                        vg = VoiceVoxGenerator()
+                        audio_bytes = vg.generate_scenario_audio(practice)
+                        if audio_bytes:
+                            st.audio(audio_bytes, format="audio/wav")
+                            st.success("Audio generated successfully!")
+                        else:
+                            st.error("Failed to generate audio. Is VOICEVOX running on localhost:50021?")
+                    except Exception as e:
+                        st.error(f"Error generating audio: {e}\n(Make sure 'pydub' is installed in your environment)")
+            
+            st.markdown("---")
             st.subheader("Reference Data")
             st.caption("This question was generated using RAG based on the vector store.")
 

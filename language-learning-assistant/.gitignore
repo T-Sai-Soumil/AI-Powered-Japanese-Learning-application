@@ -184,3 +184,8 @@ backend/chroma_db/
 
 # Mac OS System Files
 .DS_Store
+# Generated Audio and Data files
+backend/saved_questions.json
+*.wav
+*.mp3
+

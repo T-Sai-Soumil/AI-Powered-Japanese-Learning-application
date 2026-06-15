@@ -3,3 +3,5 @@ streamlit
 boto3
 youtube_transcript_api
 sentence-transformers
+
+pydub==0.25.1
