@@ -1,0 +1,1 @@
+curl -X POST http://localhost:11434/api/chat -d '{"model": "mistral", "messages": [{"role": "user", "content": "Hello"}], "stream": false}'
